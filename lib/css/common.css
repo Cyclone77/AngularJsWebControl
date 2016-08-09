@@ -1,0 +1,15 @@
+﻿*
+{
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+}
+
+.clear
+{
+    clear: both;
+}
+
+.control-topbar a
+{
+    text-decoration: none;
+}

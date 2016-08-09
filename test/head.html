@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link href="../lib/css/common.css" rel="stylesheet" />
+</head>
+<body>
+    <style>
+        /*topbar*/
+        .control-topbar
+        {
+            height: 50px;
+            position: fixed;
+            width: 100%;
+        }
+
+        .topbar-view
+        {
+            position: relative;
+            z-index: 100;
+            clear: both;
+            height: 50px;
+            background: #008fbf;
+            font-size: 12px;
+        }
+
+        .topbar-left
+        {
+            float: left;
+        }
+
+        .topbar-right
+        {
+            float: right;
+        }
+        /*logo*/
+        .topbar-logo
+        {
+            width: 50px;
+            height: 50px;
+            background: #0087b4;
+            font-size: 28px;
+            color: #FFF;
+            text-align: center;
+            line-height: 50px;
+        }
+
+            .topbar-logo span
+            {
+                line-height: 45px;
+                height: 28px;
+                width: 28px;
+                display: block;
+                margin: 0 auto;
+            }
+
+        .topbar-elem
+        {
+            height: 100%;
+            background: #09C;
+        }
+
+            .topbar-elem::after
+            {
+                clear: both;
+            }
+
+        .topbar-btn
+        {
+            background: #008fbf;
+        }
+        .topbar-link
+        {
+            color: #fff;
+            font-size: 14px;
+            line-height: 50px;
+            padding: 0 20px;
+            margin-right: 1px;
+            background: #09c;
+            display: inline-block;
+        }
+
+            .topbar-link:hover
+            {
+                background: #008fbf;
+            }
+
+        .topbar-link-btn
+        {
+            color: #fff;
+            font-size: 14px;
+            line-height: 50px;
+        }
+    </style>
+    <div class="control-topbar">
+        <!--topbar -->
+        <div class="topbar-view">
+            <!--logo-->
+            <div class="topbar-logo topbar-left">
+                <span class="glyphicon glyphicon-list"></span>
+            </div>
+            <!--内容-->
+            <div class="topbar-elem">
+                <div class="topbar-head topbar-left topbar-btn">
+                    <a href="javascript:;" class="topbar-link">
+                        <span class="topbar-link-btn">管理控制台</span>
+                    </a>
+                </div>
+                <div class="topbar-nav topbar-left topbar-btn">
+                    <a href="javascript:;" class="topbar-link">
+                        <span class="topbar-link-btn">产品与服务</span>
+                    </a>
+                </div>
+                <div class="topbar-info topbar-right">
+
+                    <div class="topbar-left topbar-btn">
+                        <a href="javascript:;" class="topbar-link">
+                            <span class="topbar-link-btn">搜索</span>
+                        </a>
+                    </div>
+
+                    <div class="topbar-left topbar-btn">
+                        <a href="javascript:;" class="topbar-link">
+                            <span class="topbar-link-btn">提醒</span>
+                        </a>
+                    </div>
+
+                    <div class="topbar-left topbar-btn">
+                        <a href="javascript:;" class="topbar-link">
+                            <span class="topbar-link-btn">用户帐号</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /*
+        *** title: "", //标题 只有child=-1生效
+        *** type: 1, //1普通按钮,2下拉菜单,3下拉自定义内容
+        *** url: "",//只有type=1有效
+        *** content: "", //只有type=2,3有效
+        *** sign: "head", //head头部,nav菜单部,info功能区
+        *** child: -1 //是否存在子内容
+        */
+        var topbar = [{
+            title: "管理控制台",
+            type: 1,
+            url: "",
+            sign: "head"
+        }, {
+            title: "产品与服务",
+            type: 2,
+            sign: "nav"
+        }, {
+            title: "个人功能",
+            type: 3,
+            sign: "info",
+            child: [{
+                title: "搜索",
+                type: 3,
+                content: ""
+            }, {
+                title: "提醒",
+                type: 3,
+                content: ""
+            }, {
+                title: "用户帐号",
+                type: 3,
+                content: ""
+            }]
+        }];
+    </script>
+</body>
+</html>
